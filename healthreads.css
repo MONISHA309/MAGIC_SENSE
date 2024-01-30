@@ -1,0 +1,538 @@
+body{
+    font-family: 'poppins';
+}
+.health-reads-container{
+    display: flex;
+    flex-direction: column;
+}
+.nav-container{
+    height: 500px;
+    position: relative;
+    width: 100%;
+    background-color: black;
+} 
+ .nav-container::before{
+    content: '';
+    background-image: linear-gradient(to right, rgb(0, 0, 0), rgba(255, 255, 255, 0)),url(https://images.pexels.com/photos/4096838/pexels-photo-4096838.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    /* opacity: 0.7; */
+}
+/* navbar style */
+.navbar {
+    margin: 30px;
+    background-color: #efebeb;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+    position: relative;
+}
+
+.navbar-brand {
+    font-size: 2rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: black;
+    margin-left: 30px;
+}
+
+.navbar-menu {
+    list-style: none;
+    display: flex;
+}
+
+.navbar-menu li {
+    margin-right: 25px;
+    font-size: 17px;
+    margin-top: 15px;
+}
+
+.navbar-menu a {
+    text-decoration: none;
+    color: rgb(117, 116, 116);
+}
+
+.navbar-menu a:hover{
+    color: black;
+}
+
+/* Hamburger menu styles */
+.hamburger {
+    display: none;
+    cursor: pointer;
+    font-size: 1.8rem;
+}
+
+/* nav content inner container 2 introduction */
+.nav-content{
+    position: relative;
+    color: white;
+    max-width: 700px;
+    /* border: 2px solid white; */
+    margin: 120px 60px; 
+    max-width: 700px;    
+}
+.nav-heading{
+    padding-bottom: 20px;
+    font-weight: bold;
+    font-size: 45px;
+    color: rgb(72, 235, 72);
+}
+.nav-para{
+    font-size: 18px;
+}
+
+.intresting-reads{
+    padding: 30px;
+    max-width: 500px;
+    margin: auto;
+    text-align: center;
+}
+.reads-heading{
+    color: rgb(72, 235, 72);
+}
+/* container for health reads which conatins 8 division */
+.health-reads-div{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    height: 1000px;
+    margin: -10px 20px 120px 20px;
+}
+.health-reads-div>div{
+    border: 3px solid black;
+    margin: 20px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #f6f4f4; 
+}
+.reads-div-content>a{
+    display: flex;
+    flex-direction: column;
+    text-align: justify;
+    text-decoration: none;
+}
+.reads-div-content>a>h2{
+    padding: 10px;
+    color: black;
+    font-weight:normal;
+    margin: 5px 20px;
+}
+.reads-div-content>a>h2:hover{
+    color: rgb(117, 116, 116);
+}
+.reads-div-content>a>p{
+    padding: 5px;
+    color: black;
+    margin-bottom: 0;
+    margin: 5px 20px;
+}
+.reads-div-content>a>p:hover{
+    color: rgb(117, 116, 116);
+}
+.reads-1{
+    grid-row-start: 1;
+    grid-row-end:3;
+    grid-auto-rows: 30rem;
+}
+.reads-3{
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end:3;
+}
+.reads-5{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end:4;
+}
+.reads-6{
+    grid-column-start: 4;
+    grid-column-end: 5;
+    grid-row-start: 2;
+    grid-row-end:4;
+}
+.reads-7{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 3;
+    grid-row-end:5;
+}
+.reads-8{
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 3;
+    grid-row-end:5;
+}
+/* recipe section */
+.recipe{
+    text-align: center;
+    margin: auto;
+    max-width: 500px;
+    
+}
+.recipe>h1{
+    color: rgb(72, 235, 72);
+}
+
+/* card section */
+.card-section{
+    display: flex;
+    flex-direction: row;
+    gap: 400px;
+    overflow: auto;
+    white-space: nowrap;
+    padding-top: 80px;
+    margin: 30px;
+}
+.card-section::-webkit-scrollbar{
+    display: none;
+}
+.card-div{
+    position: relative;
+    width: 400px;
+    height: 303.5px;
+    border-radius: 15px;
+    cursor: pointer;
+    margin: 30px;
+    /* border: 2px solid black; */
+}
+.card{
+    z-index: 2;
+    top: 0;
+    position: absolute;
+    background: white;
+    width: 400px;
+    height: 0px;
+    border: none;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+}
+.card-div:hover .card{
+    animation: heightIncrease 0.5s forwards;
+    box-shadow: 5px 5px 10px 5px   rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.card-div:hover .card-textarea{
+    animation: fadeIn 1s 0.4s forwards;
+}
+/* placing background image for each */
+.card-image-1{
+    z-index: 1;
+    top: 0;
+    position: absolute;
+    background: white;
+    width: 400px;
+    height: 300px;
+    border-radius: 15px;
+    object-fit: cover;
+    background-color: black;
+}
+.card-image-1:before{
+    content: '';
+    background-image: url(https://images.pexels.com/photos/1132040/pexels-photo-1132040.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 15px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0.7;
+}
+.card-image-2{
+    z-index: 1;
+    top: 0;
+    position: absolute;
+    background: white;
+    width: 400px;
+    height: 300px;
+    border-radius: 15px;
+    object-fit: cover;
+    background-color: black;
+
+    /* left: 0;
+    filter: blur(5px);
+    transition: 600ms ease-in-out; */
+}
+.card-image-2:before{
+    content: '';
+    background-image: url(https://images.pexels.com/photos/750952/pexels-photo-750952.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 15px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0.7;
+}
+.card-image-3{
+    z-index: 1;
+    top: 0;
+    position: absolute;
+    background: white;
+    width: 400px;
+    height: 300px;
+    border-radius: 15px;
+    object-fit: cover;
+    background-color: black;
+
+    /* left: 0;
+    filter: blur(5px);
+    transition: 600ms ease-in-out; */
+}
+.card-image-3:before{
+    content: '';
+    background-image: url(https://images.pexels.com/photos/56014/pizza-pizza-service-italian-eat-56014.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 15px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0.7;
+}
+.card-image-4{
+    z-index: 1;
+    top: 0;
+    position: absolute;
+    background: white;
+    width: 400px;
+    height: 300px;
+    border-radius: 15px;
+    object-fit: cover;
+    background-color: black;
+
+    /* left: 0;
+    filter: blur(5px);
+    transition: 600ms ease-in-out; */
+}
+.card-image-4:before{
+    content: '';
+    background-image: url(https://images.pexels.com/photos/4963961/pexels-photo-4963961.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 15px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0.7;
+}
+.card-image-5{
+    z-index: 1;
+    top: 0;
+    position: absolute;
+    background: white;
+    width: 400px;
+    height: 300px;
+    border-radius: 15px;
+    object-fit: cover;
+    background-color: black;
+
+    /* left: 0;
+    filter: blur(5px);
+    transition: 600ms ease-in-out; */
+}
+.card-image-5:before{
+    content: '';
+    background-image: url(https://images.pexels.com/photos/1366238/pexels-photo-1366238.jpeg?auto=compress&cs=tinysrgb&w=600);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 15px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0.7;
+}
+.card-image-6{
+    z-index: 1;
+    top: 0;
+    position: absolute;
+    background: white;
+    width: 400px;
+    height: 300px;
+    border-radius: 15px;
+    object-fit: cover;
+    background-color: black;
+
+    /* left: 0;
+    filter: blur(5px);
+    transition: 600ms ease-in-out; */
+}
+.card-image-6:before{
+    content: '';
+    background-image: url(https://images.pexels.com/photos/89778/strawberries-frisch-ripe-sweet-89778.jpeg?auto=compress&cs=tinysrgb&w=600);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 15px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0.7;
+}
+.card-image>h1{
+    color: white;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin-top: 130px;
+}
+.card-textarea{
+    opacity: 0;
+    text-align: center;
+    padding-top: 50px;
+    transition: 600ms;
+}
+.card-textarea>h1{
+    color: rgb(72, 235, 72);
+}
+@keyframes heightIncrease{
+    0%{
+        height: 0px;
+    }
+    100%{
+        height: 300px;
+    }
+}
+@keyframes fadeIn{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+  /* styling section */
+  section {
+    background: #172940;
+    padding-top: 60px;
+}
+
+/* styling footer part*/
+footer {
+    display: flex;
+    align-items: flex-start;
+    /* space between heading and link */
+    gap: 55px;
+    /* space between flex and screen */
+    margin: 0 30px;
+    color: #a2b5cd;
+    margin: 0 auto;
+    max-width: 90%;
+    padding: 0;
+}
+/* styling nutritionist heading */
+.footer-heading{
+    color: white;
+    margin-top: 10px;
+    font-size: 30px;
+}
+/* line between top and bottom */
+footer.top {
+    border-bottom: 2px solid #3a4f6a;
+    padding-bottom: 20px;
+}
+footer.bottom {
+    padding: 20px 0;
+    /* separating links and legal */
+    justify-content: space-between;
+}
+
+footer.top .links {
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+}
+
+/* styling top portion of footer section */
+.links > div {
+    margin: 0 30px;
+    display: grid;
+    gap: 5px;
+    margin-bottom: 30px;
+}
+.quick-links{
+    margin-bottom: 0;
+    width: 180px;
+}
+.quick-links>h2{
+    font-size: 20px;
+    font-weight: 400;
+    color: #f7f7f7;
+}
+.top>.links>div>div>i{
+    font-size: 20px;
+    padding-right: 10px;
+    cursor: pointer;
+}
+/* styling links  */
+.links>div>div>a{
+    text-decoration: none;
+    color: #a2b5cd;
+}
+.links>div>ul>li>a{
+    text-decoration: none;
+    color: #a2b5cd;
+}
+.links>div>ul{
+    list-style: none;
+}
+.links>div>ul>li:before {
+    content: '>';
+    color:#a2b5cd ;
+    font-weight: bold;
+    padding-right: 10px;
+}
+.links> .about-our-mission{
+    max-width: 300px;
+    margin-left: -30px;
+}
+.links> .about-our-mission>a{
+    text-decoration: none;
+    margin-bottom: 55px;
+    color: #a2b5cd;
+}
+footer h2 {
+    font-size: 20px;
+    font-weight: 400;
+    color: #f7f7f7;
+}
+/* styling bottom portion of footer section */
+.legal > a {
+    margin: 0 7px;
+}
+.legal > span {
+    margin-right: 13px;
+}
+footer.bottom .links {
+    display: flex;
+    gap: 25px;
+    font-size: 24px;
+}

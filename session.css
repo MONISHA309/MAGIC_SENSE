@@ -1,0 +1,341 @@
+body,ul{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins';
+}
+.session-container{
+    display: flex;
+    flex-direction: column;
+}
+.session-nav-container{
+    height: 400px;
+    position: relative;
+    width: 100%;
+    background-color: black;
+}
+.session-nav-container::before{
+    content: '';
+    background-image: url(https://media.istockphoto.com/id/995518546/photo/assortment-of-colorful-ripe-tropical-fruits-top-view.jpg?s=612x612&w=0&k=20&c=bz2zksjSPikOYm9I-mG-f8SAQWVpFsR4M_u4K9soLQ0=);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    opacity: 0.4;
+}
+/* navbar style */
+.session-navbar {
+    margin: 30px;
+    background-color: #efebeb;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    position: relative;
+}
+
+.session-navbar-brand {
+    font-size: 2rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: black;
+    margin-left: 30px;
+}
+
+.session-navbar-menu {
+    list-style: none;
+    display: flex;
+}
+
+.session-navbar-menu li {
+    margin-right: 25px;
+    font-size: 17px;
+}
+
+.session-navbar-menu a {
+    text-decoration: none;
+    color: rgb(117, 116, 116);
+}
+
+.session-navbar-menu a:hover{
+    color: black;
+}
+
+/* Hamburger menu styles */
+.session-hamburger {
+    display: none;
+    cursor: pointer;
+    font-size: 1.8rem;
+}
+
+
+
+/* nav content inner container 2 introduction */
+.session-booking-content{
+    color: white;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    margin-top: 70px;
+    font-size: 25px;
+}
+.session-text{
+    padding-top: 40px;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    margin: auto;
+    height: 60px;
+    align-items: center;
+}
+/* animation effect in session content */
+
+.session-text-one{
+    animation: riseUp 0.5s forwards;
+    font-size: 1.5rem;
+    transform: scale(0);
+    color: rgb(72, 235, 72);
+}
+.session-text-two{
+    animation: riseUp 0.5s 0.5s forwards;
+    font-size: 1.5rem;
+    transform: scale(0);
+    color: rgb(72, 235, 72);
+}
+/* applying animation for paragraph */
+.subtext{
+    opacity: 0;
+    animation: fadeIn 4s 1s forwards;
+    font-size: 20px;
+    max-width: 70%;
+    margin: auto;
+    text-align: center;
+}
+@keyframes riseUp{
+    0%{
+        transform: scaleY(0);
+    }
+    100%{
+        transform: scaleY(1);
+    }
+}
+@keyframes fadeIn{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+
+.session-form{
+    margin: 20px auto;
+    padding: 0 200px 0 250px;
+    position: relative;
+    max-width: 60%;
+    height: 730px;
+    background-color: black; 
+    border: 1px solid rgb(229, 228, 228);
+    border-radius: 10px;
+    overflow: hidden; 
+    display:flex ;
+    flex-direction: column;
+}
+
+.session-form::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('https://images.pexels.com/photos/1120581/pexels-photo-1120581.jpeg?auto=compress&cs=tinysrgb&w=600');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    opacity: 0.2;
+    filter: blur(8px);
+    
+}
+.session-input{
+    position: relative;
+    color: white;
+    font-size: 23px;
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    /* border: 2px solid white; */
+}
+/* .session-input>div{
+    border: 2px solid white;
+} */
+.session-input>.label{
+    display: flex;
+    align-items: center;
+    padding-left: 30px;
+}
+.session-input>.h1{
+    grid-column-start: 1;
+    grid-column-end: 3;
+    color: rgb(72, 235, 72);
+    position: relative;
+    font-size: 40px;
+    text-align: center;
+    margin-top: 25px;
+}
+.session-input>input,select{
+    padding:8px;
+    margin: 20px;
+    cursor: pointer;
+    border-radius: 20px;
+    outline: none;
+    font-size: 15px;
+    appearance: none;
+    width: 85%;
+}
+.session-input>select,input{
+    padding: 8px;
+    margin: 20px;
+    border: 1px solid rgb(81, 80, 80);
+    border-radius: 20px;
+    outline: none;
+    color: black;
+    font-size: 15px;
+    background-color: white;
+    font-size: 15px;
+    width: 80%;
+}
+
+.session-form>.submit{
+    padding: 30px 25px;
+}
+.session-form>.submit>a{
+    
+    color: white;
+    /* border: 2px solid white; */
+    padding: 15px 20px;
+    position: relative;
+    background-color: rgb(54, 221, 54);
+    border-radius: 30px;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+.session-form>.submit>a:hover{
+    background-color: white;
+    color: black;
+    transition: 1s;
+}
+
+  /* styling section */
+  section {
+    background: #172940;
+    padding-top: 60px;
+}
+
+/* styling footer part*/
+footer {
+    display: flex;
+    align-items: flex-start;
+    /* space between heading and link */
+    gap: 55px;
+    /* space between flex and screen */
+    margin: 0 30px;
+    color: #a2b5cd;
+    margin: 0 auto;
+    max-width: 90%;
+    padding: 0;
+}
+/* styling nutritionist heading */
+.footer-heading{
+    color: white;
+    margin-top: 10px;
+    font-size: 30px;
+}
+/* line between top and bottom */
+footer.top {
+    border-bottom: 2px solid #3a4f6a;
+    padding-bottom: 20px;
+}
+footer.bottom {
+    padding: 20px 0;
+    /* separating links and legal */
+    justify-content: space-between;
+}
+
+footer.top .links {
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+}
+
+/* styling top portion of footer section */
+.links > div {
+    margin: 0 30px;
+    display: grid;
+    gap: 5px;
+    margin-bottom: 30px;
+}
+.quick-links{
+    margin-bottom: 0;
+    width: 180px;
+}
+.quick-links>h2{
+    font-size: 20px;
+    font-weight: 400;
+    color: #f7f7f7;
+}
+.top>.links>div>div>i{
+    font-size: 20px;
+    padding-right: 10px;
+    cursor: pointer;
+}
+/* styling links  */
+.links>div>div>a{
+    text-decoration: none;
+    color: #a2b5cd;
+}
+.links>div>ul>li>a{
+    text-decoration: none;
+    color: #a2b5cd;
+}
+.links>div>ul{
+    list-style: none;
+}
+.links>div>ul>li:before {
+    content: '>';
+    color:#a2b5cd ;
+    font-weight: bold;
+    padding-right: 10px;
+}
+.links> .about-our-mission{
+    max-width: 300px;
+    margin-left: -30px;
+}
+.links> .about-our-mission>a{
+    text-decoration: none;
+    margin-bottom: 55px;
+    color: #a2b5cd;
+}
+footer h2 {
+    font-size: 20px;
+    font-weight: 400;
+    color: #f7f7f7;
+}
+/* styling bottom portion of footer section */
+.legal > a {
+    margin: 0 7px;
+}
+.legal > span {
+    margin-right: 13px;
+}
+footer.bottom .links {
+    display: flex;
+    gap: 25px;
+    font-size: 24px;
+}

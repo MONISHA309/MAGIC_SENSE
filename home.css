@@ -1,0 +1,535 @@
+body,ul{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins';
+    position: relative;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+}
+.nav-container{
+    height: 740px;
+    position: relative;
+    width: 100%;
+    background-color: black;
+}
+.nav-container::before{
+    content: '';
+    background-image: url(https://images.pexels.com/photos/4838747/pexels-photo-4838747.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    opacity: 0.7;
+}
+/* navbar style */
+.navbar {
+    margin: 30px;
+    background-color: #efebeb;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    position: relative;
+}
+
+.navbar-brand {
+    font-size: 2rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: black;
+    margin-left: 30px;
+}
+
+.navbar-menu {
+    list-style: none;
+    display: flex;
+}
+
+.navbar-menu li {
+    margin-right: 25px;
+    font-size: 17px;
+}
+
+.navbar-menu a {
+    text-decoration: none;
+    color: rgb(117, 116, 116);
+}
+
+.navbar-menu a:hover{
+    color: black;
+}
+
+/* Hamburger menu styles */
+.hamburger {
+    display: none;
+    cursor: pointer;
+    font-size: 1.8rem;
+}
+
+
+
+/* nav content inner container 2 introduction */
+.nav-content{
+    color: black;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    position: relative;
+    text-align: center;
+}
+.nav-heading{
+    font-size: 40px;
+}
+.nav-para{
+    padding: 10px;
+}
+/* division fro heading and introduction paragraph */
+.nav-div{
+    max-width: 800px;
+    padding-top: 20px;
+    font-size: x-large;
+    margin: 50px;
+    height: 350px;
+    background: rgba(199, 199, 199, 0.7);
+    border-radius: 10px;
+    
+}
+.nav-button{
+    padding: 10px 15px;
+    border: 2px solid rgb(72, 235, 72);
+    border-radius: 5px;
+    background-color: rgb(72, 235, 72);
+    color: white;
+    font-size: 15px;
+    transition: 0.3s;
+}
+.nav-button>a{
+    text-decoration: none;
+    color: white;
+}
+.nav-button:hover{
+    padding: 10px 15px;
+    border: 2px solid black;
+    border-radius: 5px;
+    color: white;
+    background-color: black;
+    font-size: 15px;
+    
+}
+
+
+/* inner container 3 meal plans */
+
+.healty-meal-plans{
+    width: 50%;
+    margin: auto;
+    text-align: center;
+}
+
+/* 4 boxes for meal plan */
+.meal-plans{
+    display: flex;
+    margin: 0 50px;
+    padding: 20px;
+}
+/* common class for 4 boxes */
+.daily-food{
+    width: 50%;
+    background-color: white;
+    box-shadow: 5px 5px 10px 5px   rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin: 0 20px;
+    border-radius: 15px;
+    height: 530px;
+}
+.daily-food>img{
+    border-radius: 15px 15px 0 0;
+}
+/* meal plan's text */
+.meal-plans-content{
+    padding: 10px 20px;
+    font-size: 20px;
+}
+.meal-plans>.daily-food>.meal-plans-content>button{
+    background-color: rgb(72, 235, 72);
+    border: 2px solid rgb(72, 235, 72);
+    padding: 10px 15px;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+.meal-plans>.daily-food>.meal-plans-content>button:hover{
+    background-color: black;
+    border: 2px solid black;
+    transition: 1s;
+}
+
+/* pop up effect when meal plan button is clicked */
+.popup-container {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+  }
+  .popup {
+    background-color: white;
+    padding: 40px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    position: relative;
+    max-width: 40%;
+  }
+  .popup img {
+    width: 600px;
+    height: 350px;
+  }
+  .close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+  }
+/* container 4 pyramid */
+.pyramid{
+    display: flex;
+    flex-direction: row;
+    height: 700px;
+    margin: 0 80px;
+    background-color: #fff; 
+}
+
+/* pyramid text */
+.pyramid-knowledge{
+    width: 50%;
+    padding: 40px;
+    margin: 50px 0 50px 50px;
+    background-color: white;
+}
+.pyramid-knowledge>h1{
+    color: rgb(72, 235, 72);
+    font-weight: bold;
+    font-size: 40px;
+}
+.pyramid-knowledge>p{
+    font-size: 20px;
+    text-align: justify;
+}
+.pyramid-knowledge>ul{
+    font-size: 20px;
+    list-style: none;
+}
+
+/* tick symbol for list inside pyramid container */
+.pyramid-knowledge>ul li:before {
+    content: '✓';
+    color:rgb(72, 235, 72) ;
+    font-weight: bold;
+    padding-right: 10px;
+}
+
+.pyramid-image{
+    background-color: white;
+    width: 50%;
+    background-image: url(https://templatekit.jegtheme.com/nutritist/wp-content/uploads/sites/160/2021/09/nutritionist-concept-DT4QZB2.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 20px;
+    /* border: 2px solid black; */
+    margin: 50px 50px 50px 0;
+
+}
+
+/* session booking container 5 */
+.session-details{
+    width: 60%;
+    margin: auto;
+    text-align: center;
+}
+.session-heading{
+    font-size: 40px;
+    color: rgb(72, 235, 72) ;
+}
+.subtext{
+    font-size: 20px;
+}
+
+/* session link through image */
+.session-booking{
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+    height: 700px;
+    /* border: 2px solid black; */
+    margin: 40px;
+}
+ /* session's right division */
+.session-image{
+    width: 500px;
+    height: 650px;
+    margin: 40px 100px 40px 200px ;
+    border-radius: 10px;
+    background-image: url(https://img.freepik.com/free-photo/front-view-chopped-fresh-vegetables-cheese-cutting-board-spices-green-bundle-black-surface_179666-42561.jpg?size=626&ext=jpg&ga=GA1.2.761830016.1691507518&semt=ais);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: end; */
+}
+.session-image>h1{
+    margin: 40px 20px 0 20px;
+    font-size: 40px;
+}
+.session-image>a{
+    margin: 40px 20px;
+    background-color: rgb(72, 235, 72);
+    border: 2px solid rgb(72, 235, 72);
+    padding: 10px 15px;
+    color: white;
+    font-size: 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    width: 30%;
+}
+.session-image>a:hover{
+    background-color: white;
+    border: 2px solid white;
+    color: black;
+    transition: 1s;
+}
+/* session's left division */
+.session-text{
+    width: 50%;
+    margin: 30px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+}
+.session-text>h1{
+    font-size: 40px;
+    color: rgb(72, 235, 72);
+}
+.session-text>p{
+    font-size: 20px;
+    text-align: justify;
+}
+.session-text>ul{
+    font-size: 20px;
+    list-style: none;
+    text-align: justify;
+}
+.session-text>ul li:before{
+    content: '✓';
+    padding: 10px;
+    font-weight: bold;
+    color: rgb(72, 235, 72);
+}
+/* styling horizontal line */
+.horizontal_line{
+    border-top: 2px solid rgb(72, 235, 72);
+    width: 50%;
+    margin: 20px auto ;
+}
+/* tips session */
+.tips-text{
+    font-size: 30px;
+    font-weight: bold;
+    margin: auto;
+}
+/* life tips container 6 */
+.some-life-tips{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: 20px 100px;
+    gap: 50px;
+    padding: 20px;
+    
+}
+.tips{
+    height: 500px;
+    border-radius: 25px 0 25px 0;
+    font-size: 20px;
+    text-align: center;
+    
+}
+.tips:hover{
+    box-shadow: 5px 5px 10px 5px   rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background-color: rgb(244, 242, 242);
+}
+.tips>img{
+    border-radius: 20px 0 20px 0;
+}
+.tips-button{
+    background-color: rgb(72, 235, 72);
+    border: 2px solid rgb(72, 235, 72);
+    border-radius: 10px 0 10px 0;
+    padding: 10px 15px;
+    color: white;
+    font-size: 15px;
+    box-shadow: 5px 5px 10px 5px   rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    cursor: pointer;
+}
+.tips-button:hover{
+    background-color: black;
+    border: 2px solid black;
+    transition: 1s;
+}
+
+
+/* popup effect when tips button is clicked */
+  .custom-popup-container {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+  }
+  .custom-popup {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    position: relative;
+    max-width: 50%;
+    text-align: center;
+  }
+  .custom-close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+  }
+
+  /* styling section */
+section {
+    background: #172940;
+    padding-top: 60px;
+}
+
+/* styling footer part*/
+footer {
+    display: flex;
+    align-items: flex-start;
+    /* space between heading and link */
+    gap: 55px;
+    /* space between flex and screen */
+    margin: 0 30px;
+    color: #a2b5cd;
+    margin: 0 auto;
+    max-width: 90%;
+    padding: 0;
+}
+/* styling nutritionist heading */
+.footer-heading{
+    color: white;
+    margin-top: 10px;
+    font-size: 30px;
+}
+/* line between top and bottom */
+footer.top {
+    border-bottom: 2px solid #3a4f6a;
+    padding-bottom: 20px;
+}
+footer.bottom {
+    padding: 20px 0;
+    /* separating links and legal */
+    justify-content: space-between;
+}
+
+footer.top .links {
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+}
+
+/* styling top portion of footer section */
+.links > div {
+    margin: 0 30px;
+    display: grid;
+    gap: 5px;
+    margin-bottom: 30px;
+}
+.quick-links{
+    margin-bottom: 0;
+    width: 180px;
+}
+.quick-links>h2{
+    font-size: 20px;
+    font-weight: 400;
+    color: #f7f7f7;
+}
+.top>.links>div>div>i{
+    font-size: 20px;
+    padding-right: 10px;
+    cursor: pointer;
+}
+/* styling links  */
+.links>div>div>a{
+    text-decoration: none;
+    color: #a2b5cd;
+}
+.links>div>ul>li>a{
+    text-decoration: none;
+    color: #a2b5cd;
+}
+.links>div>ul{
+    list-style: none;
+}
+.links>div>ul>li:before {
+    content: '>';
+    color:#a2b5cd ;
+    font-weight: bold;
+    padding-right: 10px;
+}
+.links> .about-our-mission{
+    max-width: 300px;
+    margin-left: -30px;
+}
+.links> .about-our-mission>a{
+    text-decoration: none;
+    margin-bottom: 55px;
+    color: #a2b5cd;
+}
+footer h2 {
+    font-size: 20px;
+    font-weight: 400;
+    color: #f7f7f7;
+}
+/* styling bottom portion of footer section */
+.legal > a {
+    margin: 0 7px;
+}
+.legal > span {
+    margin-right: 13px;
+}
+footer.bottom .links {
+    display: flex;
+    gap: 25px;
+    font-size: 24px;
+}

@@ -1,0 +1,424 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto+Slab:100,300,400,700");
+@import url("https://fonts.googleapis.com/css?family=Raleway:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,9000i");
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500&display=swap');
+body,ul{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins';
+}
+.container{
+    display: flex;
+    flex-direction: column;
+}
+.nav-container{
+    height: 350px;
+    position: relative;
+    width: 100%;
+    background-color: black;
+}
+.nav-container::before{
+    content: '';
+    background-image: url(https://images.pexels.com/photos/1660027/pexels-photo-1660027.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    opacity: 0.4;
+}
+/* navbar style */
+.navbar {
+    margin: 30px;
+    background-color: #efebeb;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    position: relative;
+}
+
+.navbar-brand {
+    font-size: 2rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: black;
+    margin-left: 30px;
+}
+
+.navbar-menu {
+    list-style: none;
+    display: flex;
+}
+
+.navbar-menu li {
+    margin-right: 25px;
+    font-size: 17px;
+}
+
+.navbar-menu a {
+    text-decoration: none;
+    color: rgb(117, 116, 116);
+}
+
+.navbar-menu a:hover{
+    color: black;
+}
+
+/* Hamburger menu styles */
+.hamburger {
+    display: none;
+    cursor: pointer;
+    font-size: 1.8rem;
+}
+
+
+/* nav content inner container 2 introduction */
+.content{
+    color: white;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    margin-top: 55px;
+    font-size: 25px;
+}
+
+.about-text{
+    padding-top: 40px;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    margin: auto;
+    height: 60px;
+    align-items: center;
+}
+.about-text-one{
+    animation: riseUp 0.5s forwards;
+    font-size: 1.5rem;
+    transform: scale(0);
+    color: rgb(72, 235, 72);
+}
+.about-text-two{
+    animation: riseUp 0.5s 0.5s forwards;
+    font-size: 1.5rem;
+    transform: scale(0);
+    color: rgb(72, 235, 72);
+
+}
+.subtext{
+    opacity: 0;
+    animation: fadeIn 4s 1s forwards;
+    font-size: 20px;
+    max-width: 70%;
+    margin: auto;
+    text-align: center;
+}
+@keyframes riseUp{
+    0%{
+        transform: scaleY(0);
+    }
+    100%{
+        transform: scaleY(1);
+    }
+}
+@keyframes fadeIn{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+.about-content{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 80px;
+}
+/* styling images in about page */
+.card-pic{
+    margin-top: 450px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    width: 400px;
+    height: 350px;
+    border-radius: 5px;
+    position: absolute;
+}
+.pics{
+    width: 80%;
+}
+/* applying animation to 3 images */
+.card-pic:nth-child(1){
+    left: 15%;
+    top: 30%;
+}
+.card-pic:nth-child(2){
+    left: 30%;
+    top: 45%;
+}
+.card-pic:nth-child(3){
+    left: 20%;
+    top: 60%;
+}
+.card-pic:hover{
+    transform: scale(1.1);
+    transition: 0.5s;
+    z-index: 10;
+    cursor: pointer;
+}
+
+.promo{
+    margin: 100px;
+    width: 50%;
+    /* padding: 20px; */
+    /* border: 2px solid black; */
+}
+.promo>h1{
+    font-weight: lighter;
+}
+.promo>ul{
+    font-size: 20px;
+    list-style: none;
+}
+
+/* tick symbol for list inside pyramid container */
+.promo>ul li:before {
+    content: '✓';
+    color:rgb(72, 235, 72) ;
+    font-weight: bold;
+    padding-right: 10px;
+}
+
+.horizontal_line{
+    border-top: 2px solid rgb(72, 235, 72);
+    width: 50%;
+    margin: 40px auto ;
+}
+
+/* nutritionist details section */
+.nutritionist-content{
+    max-width: 500px;
+    margin: auto;
+    text-align: center;
+}
+.nutritionist-content>h1{
+    font-weight: lighter;
+}
+
+.nutritionist-details{
+    display: flex;
+    display: -webkit-flex;
+    justify-content:center;
+    align-items:center;
+    margin-bottom: 30px;
+}
+.cards{
+    width: 100%;
+    display: flex;
+    display: -webkit-flex;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 30px;
+}
+/* placing background image for the nutritionist section */
+.card-1 .card-img,
+.card-1 .card-img-hover{
+    background-image: url(https://templatekit.jegtheme.com/nutritist/wp-content/uploads/sites/160/2021/09/female-nutritionist-working-on-digital-tablet-PL6QX5N.jpg);
+}
+.card-2 .card-img,
+.card-2 .card-img-hover{
+    background-image: url(https://images.pexels.com/photos/6749773/pexels-photo-6749773.jpeg?auto=compress&cs=tinysrgb&w=600);
+}
+.card-3 .card-img,
+.card-3 .card-img-hover{
+    background-image: url(https://templatekit.jegtheme.com/nutritist/wp-content/uploads/sites/160/2021/09/cheerful-blonde-nutritionist-sitting-near-laptop-a-L2HFN9E-1.jpg);
+}
+
+.card-img{
+    visibility: hidden;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 500px;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+}
+.card-info-hover{
+    position: absolute;
+    /* padding: 16px; */
+    width: 100%;
+    opacity: 0;
+    top: 0;
+}
+.card-img-hover{
+    transition: 0.2s all ease-out;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    position: absolute;
+    height: 450px;
+    border-radius: 12px;
+    top: 0;
+}
+.card{
+    margin-right: 40px;
+    transition: all 0.4s cubic-bezier(0.175,0.885,0,1);
+    background-color:#efebeb;
+    width: 33.3%;
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0px 13px 10px -7px rgba(0,0,0,0.1);
+}
+.card:hover{
+    box-shadow: 0px 30px 18px -8px rgba(0,0,0,0.1);
+    transform: scale(1.1,1.1);
+}
+.card-info{
+    z-index: 2;
+    background-color:#efebeb;
+    border-radius: 12px;
+    padding: 16px 24px 24px 24px;
+}
+.card-category{
+    text-transform: uppercase;
+    font-size: 20px;
+    letter-spacing: 2px;
+    font-weight: 500;
+    color: black;
+}
+.card-title{
+    font-size: 25px;
+    margin-top: -15px;
+    margin-bottom: 15px;
+}
+.card-author{
+    font-weight: 600;
+    text-decoration: none;
+}
+.card:hover .card-img-hover{
+    height: 100%;
+    opacity: 1;
+}
+.card:hover .card-info{
+    background-color: transparent;
+    position: relative;
+    color: black;
+}
+.card:hover .card-info-hover{
+    opacity: 1;
+}
+
+  /* styling section */
+  section {
+    background: #172940;
+    padding-top: 60px;
+}
+
+/* styling footer part*/
+footer {
+    display: flex;
+    align-items: flex-start;
+    /* space between heading and link */
+    gap: 55px;
+    /* space between flex and screen */
+    margin: 0 30px;
+    color: #a2b5cd;
+    margin: 0 auto;
+    max-width: 90%;
+    padding: 0;
+}
+/* styling nutritionist heading */
+.footer-heading{
+    color: white;
+    margin-top: 10px;
+    font-size: 30px;
+}
+/* line between top and bottom */
+footer.top {
+    border-bottom: 2px solid #3a4f6a;
+    padding-bottom: 20px;
+}
+footer.bottom {
+    padding: 20px 0;
+    /* separating links and legal */
+    justify-content: space-between;
+}
+
+footer.top .links {
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+}
+
+/* styling top portion of footer section */
+.links > div {
+    margin: 0 30px;
+    display: grid;
+    gap: 5px;
+    margin-bottom: 30px;
+}
+.quick-links{
+    margin-bottom: 0;
+    width: 180px;
+}
+.quick-links>h2{
+    font-size: 20px;
+    font-weight: 400;
+    color: #f7f7f7;
+}
+.top>.links>div>div>i{
+    font-size: 20px;
+    padding-right: 10px;
+    cursor: pointer;
+}
+/* styling links  */
+.links>div>div>a{
+    text-decoration: none;
+    color: #a2b5cd;
+}
+.links>div>ul>li>a{
+    text-decoration: none;
+    color: #a2b5cd;
+}
+.links>div>ul{
+    list-style: none;
+}
+.links>div>ul>li:before {
+    content: '>';
+    color:#a2b5cd ;
+    font-weight: bold;
+    padding-right: 10px;
+}
+.links> .about-our-mission{
+    max-width: 300px;
+    margin-left: -30px;
+}
+.links> .about-our-mission>a{
+    text-decoration: none;
+    margin-bottom: 55px;
+    color: #a2b5cd;
+}
+footer h2 {
+    font-size: 20px;
+    font-weight: 400;
+    color: #f7f7f7;
+}
+/* styling bottom portion of footer section */
+.legal > a {
+    margin: 0 7px;
+}
+.legal > span {
+    margin-right: 13px;
+}
+footer.bottom .links {
+    display: flex;
+    gap: 25px;
+    font-size: 24px;
+}
